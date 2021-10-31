@@ -146,10 +146,10 @@ class _AnyLinkPreviewState extends State<AnyLinkPreview> {
 
   void _launchURL(url) async {
     if (await canLaunch(url)) {
-      await launch(url);
+      //await launch(url);
     } else {
       try {
-        await launch(url);
+        //await launch(url);
       } catch (err) {
         throw 'Could not launch $url. Error: $err';
       }
@@ -196,7 +196,7 @@ class _AnyLinkPreviewState extends State<AnyLinkPreview> {
               title: title!,
               description: desc!,
               imageUri: image!,
-              //onTap: _launchURL,
+              onTap: _launchURL,
               titleTextStyle: widget.titleStyle,
               bodyTextStyle: widget.bodyStyle,
               bodyTextOverflow: widget.bodyTextOverflow,
@@ -212,7 +212,7 @@ class _AnyLinkPreviewState extends State<AnyLinkPreview> {
               title: title!,
               description: desc!,
               imageUri: image!,
-              //onTap: _launchURL,
+              onTap: _launchURL,
               titleTextStyle: widget.titleStyle,
               bodyTextStyle: widget.bodyStyle,
               bodyTextOverflow: widget.bodyTextOverflow,
